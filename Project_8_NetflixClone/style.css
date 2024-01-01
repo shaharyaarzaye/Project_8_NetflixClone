@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+}
+
+.hero-section{
+    background-image:radial-gradient(ellipse, #00000022, rgba(0, 0, 0, 0.743)), url(heroimag.jpg);
+    height: 700px;
+    background-repeat: no-repeat;
+}
+
+.navbar{
+    height: 92px;
+    padding: 2px 200px 0px 200px ;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+.navbar img{
+    height: 148px;
+}
+select {
+    color: white;
+    border-radius: 5px;
+    padding: 10px 23px;
+   background-color: rgba(0, 0, 0, 0.343);
+}
+.navbar button{
+    background-color: red;
+    color: white;
+    padding: 10px 20px;
+    border: 2px solid red;
+    border-radius: 5px;
+    margin: 15px;
+    
+}
+
+main .intro-email-section p{
+    color: white;
+    font-size: 50px;
+    padding: 0  150px 0 150px;
+    text-align: center;
+}
