@@ -3,7 +3,7 @@
 }
 
 .hero-section{
-    background-image:radial-gradient(ellipse, #00000022, rgba(0, 0, 0, 0.743)), url(heroimag.jpg);
+    background-image:radial-gradient(ellipse, #00000022, rgba(0, 0, 0, 0.743)), url(Images/heroimag.jpg);
     height: 700px;
     background-repeat: no-repeat;
 }
@@ -34,9 +34,54 @@ select {
     
 }
 
-main .intro-email-section p{
+main .intro-texts .headline{
     color: white;
+    font-family: fantasy;
+    font-weight: lighter;
     font-size: 50px;
-    padding: 0  150px 0 150px;
+    padding: 0 250px 0 250px;
     text-align: center;
+    margin-bottom: 30px;
+    margin-top: 160px;
 }
+
+main .intro-texts .nexline{
+    color:white;
+    font-size: 28px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+main .email-signups {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+
+}
+
+main .email-signups input{
+    border: rgb(129, 123, 123) 1px solid ;
+    border-radius: 5px;
+    color: white;
+    padding: 20px 200px 20px 10px;
+    background-color: rgba(26, 24, 24, 0.884);
+}
+
+
+main .email-signups input::placeholder {
+    font-size: 15px;
+    color: rgb(207, 200, 200);
+    opacity: 1; /* Firefox */
+  }
+
+.email-signups button{
+    font-weight: bold;
+    color: white;
+    background-color: red;
+    font-size: 20px;
+    padding: 15px 40px 15px 15px;
+    border-radius: 5px;
+    border: 1px solid red;
+    margin-left: 10px;
+  }
