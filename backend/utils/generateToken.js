@@ -1,7 +1,7 @@
 import jwt from 'jsonwebtoken'
 import { ENV_VARS } from '../config/envVars.js'
 
-const generateTokenAndSetCookeie = (userId , res) =>{
+export const generateTokenAndSetCookie = (userId , res) =>{
     const token = jwt.sign({userId} , ENV_VARS.JWT_SECRET , {expiresIn : "15d"})
 
     res.cookie("jwt-netflix" , token , {
@@ -11,5 +11,3 @@ const generateTokenAndSetCookeie = (userId , res) =>{
         secure : ENV_VARS.NODE_ENV !=="development",
     })
 }
-
-export default generateTokenAndSetCookeie;
