@@ -3,6 +3,10 @@ import { User } from "../models/user.model.js";
 import { ENV_VARS } from "../config/envVars.js";
 
 export const protectRoute = async (req, res, next) => {
+	if (req.method === 'OPTIONS') {
+		return res.status(200).end();
+	}
+
 	try {
 		const token = req.cookies["jwt-netflix"];
 

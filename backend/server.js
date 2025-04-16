@@ -12,12 +12,14 @@ const app = express()
 const PORT = ENV_VARS.PORT
 // Define allowed origins (can be single or an array of allowed domains)
 const corsOptions = {
-	origin: 'https://super-duper-fiesta-g6grj4v745gfjpq-5173.app.github.dev', // Replace with your frontend URL
+	origin: `https://${process.env.CODESPACE_NAME}-5173.app.github.dev`, // Replace with your frontend URL
 	methods: ['GET', 'POST', 'PUT', 'DELETE'],
 	credentials: true, // Allow cookies and credentials to be sent
   };
   
-  app.use(cors(corsOptions));
+  const codespaceName = process.env.CODESPACE_NAME
+  console.log(codespaceName)
+app.use(cors(corsOptions));
 app.use(express.json()) 
 app.use(cookieParser())
 
