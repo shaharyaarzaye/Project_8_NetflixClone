@@ -65,7 +65,7 @@ export async function signup(req, res) {
 export async function login(req, res) {
 	try {
 		const { email, password } = req.body;
-
+		console.log("login request")
 		if (!email || !password) {
 			return res.status(400).json({ success: false, message: "All fields are required" });
 		}
@@ -90,6 +90,7 @@ export async function login(req, res) {
 				password: "",
 			},
 		});
+		console.log("user logged in successfully..")
 	} catch (error) {
 		console.log("Error in login controller", error.message);
 		res.status(500).json({ success: false, message: "Internal server error" });
@@ -106,12 +107,12 @@ export async function logout(req, res) {
 	}
 }
 
-// export async function authCheck(req, res) {
-// 	try {
-// 		console.log("req.user:", req.user);
-// 		res.status(200).json({ success: true, user: req.user });
-// 	} catch (error) {
-// 		console.log("Error in authCheck controller", error.message);
-// 		res.status(500).json({ success: false, message: "Internal server error" });
-// 	}
-// }
+export async function authCheck(req, res) {
+	try {
+		console.log("req.user:", req.user);
+		res.status(200).json({ success: true, user: req.user });
+	} catch (error) {
+		console.log("Error in authCheck controller", error.message);
+		res.status(500).json({ success: false, message: "Internal server error" });
+	}
+}
